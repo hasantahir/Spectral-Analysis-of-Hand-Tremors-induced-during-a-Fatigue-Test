@@ -1,0 +1,106 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=1,
+xmax=8,
+xtick={1,2,3,4,5,6,7,8},
+xticklabels={{1},{2},{3},{4},{5},{N - 2},{N - 1},{N}},
+xticklabel style={rotate=270},
+ymin=0,
+ymax=100,
+ylabel style={font=\color{white!15!black}},
+ylabel={PSD \%},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+
+\addplot[area legend, draw=none, fill=blue, fill opacity=0.2]
+table[row sep=crcr] {%
+x	y\\
+1	6.79088731559103\\
+2	4.55650200010541\\
+3	5.80013547514211\\
+4	9.05180220560714\\
+5	4.33401221123138\\
+6	6.5121776476002\\
+7	4.50463262468829\\
+8	0.25137041410451\\
+9	6.20028831961209\\
+10	7.4932337626852\\
+11	4.01218774012995\\
+11	26.1459727920009\\
+10	23.7049522429386\\
+9	19.3398853950008\\
+8	35.1911111129855\\
+7	26.5738316106618\\
+6	18.3880913172949\\
+5	22.4308955832345\\
+4	21.8604049663546\\
+3	26.3143366256627\\
+2	22.0703850038952\\
+1	22.5279341350838\\
+}--cycle;
+\addlegendentry{data1}
+
+\addplot [color=white!55!blue]
+  table[row sep=crcr]{%
+1	6.79088731559103\\
+2	4.55650200010541\\
+3	5.80013547514211\\
+4	9.05180220560714\\
+5	4.33401221123138\\
+6	6.5121776476002\\
+7	4.50463262468829\\
+8	0.25137041410451\\
+9	6.20028831961209\\
+10	7.4932337626852\\
+11	4.01218774012995\\
+};
+\addlegendentry{data2}
+
+\addplot [color=white!55!blue]
+  table[row sep=crcr]{%
+1	22.5279341350838\\
+2	22.0703850038952\\
+3	26.3143366256627\\
+4	21.8604049663546\\
+5	22.4308955832345\\
+6	18.3880913172949\\
+7	26.5738316106618\\
+8	35.1911111129855\\
+9	19.3398853950008\\
+10	23.7049522429386\\
+11	26.1459727920009\\
+};
+\addlegendentry{data3}
+
+\addplot [color=blue, mark=*, mark options={solid, fill=white!20!red, blue}]
+  table[row sep=crcr]{%
+1	14.6594107253374\\
+2	13.3134435020003\\
+3	16.0572360504024\\
+4	15.4561035859809\\
+5	13.382453897233\\
+6	12.4501344824476\\
+7	15.5392321176751\\
+8	17.721240763545\\
+9	12.7700868573065\\
+10	15.5990930028119\\
+11	15.0790802660654\\
+};
+\addlegendentry{data4}
+
+\end{axis}
+\end{tikzpicture}%

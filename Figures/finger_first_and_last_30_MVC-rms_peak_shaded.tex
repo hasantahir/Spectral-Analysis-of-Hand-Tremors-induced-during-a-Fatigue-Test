@@ -1,0 +1,91 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.562in,
+at={(0.758in,0.485in)},
+scale only axis,
+xmin=1,
+xmax=8,
+xtick={1,2,3,4,5,6,7,8},
+xticklabels={{Pre - 1},{Pre - 2},{Pre - 3},{Pre - 4},{Pre - 5},{Post - 1},{Post - 2},{Post - 3}},
+xticklabel style={rotate=270},
+ymin=-5,
+ymax=35,
+ylabel style={font=\color{white!15!black}},
+ylabel={Amplitude (a.u.)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+
+\addplot[area legend, draw=none, fill=blue, fill opacity=0.2]
+table[row sep=crcr] {%
+x	y\\
+1	1.4855777772036\\
+2	1.89541599196058\\
+3	2.00614497798765\\
+4	1.40878875203152\\
+5	1.74232293040857\\
+6	4.34460457539793\\
+7	2.05940375798267\\
+8	1.93301984231691\\
+8	15.5358712711542\\
+7	18.6117640385847\\
+6	12.6420556758954\\
+5	7.48045862993352\\
+4	8.14544362620618\\
+3	5.98364529161137\\
+2	5.94783945203872\\
+1	5.58713735205306\\
+}--cycle;
+\addlegendentry{data1}
+
+\addplot [color=white!55!blue]
+  table[row sep=crcr]{%
+1	1.4855777772036\\
+2	1.89541599196058\\
+3	2.00614497798765\\
+4	1.40878875203152\\
+5	1.74232293040857\\
+6	4.34460457539793\\
+7	2.05940375798267\\
+8	1.93301984231691\\
+};
+\addlegendentry{data2}
+
+\addplot [color=white!55!blue]
+  table[row sep=crcr]{%
+1	5.58713735205306\\
+2	5.94783945203872\\
+3	5.98364529161137\\
+4	8.14544362620618\\
+5	7.48045862993352\\
+6	12.6420556758954\\
+7	18.6117640385847\\
+8	15.5358712711542\\
+};
+\addlegendentry{data3}
+
+\addplot [color=blue, mark=*, mark options={solid, fill=white!20!red, blue}]
+  table[row sep=crcr]{%
+1	3.53635756462833\\
+2	3.92162772199965\\
+3	3.99489513479951\\
+4	4.77711618911885\\
+5	4.61139078017104\\
+6	8.49333012564667\\
+7	10.3355838982837\\
+8	8.73444555673555\\
+};
+\addlegendentry{data4}
+
+\end{axis}
+\end{tikzpicture}%

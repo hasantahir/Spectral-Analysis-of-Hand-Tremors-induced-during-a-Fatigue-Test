@@ -1,0 +1,330 @@
+\documentclass[conference, a4paper]{IEEEtran}
+%
+\usepackage[T1]{fontenc} % optional
+\usepackage{times}
+\usepackage[cmex10]{amsmath}
+\usepackage{calc}
+\usepackage{amsfonts} % to load math symbols
+\usepackage{mdwmath}
+\usepackage{commath}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+% \usepackage[keeplastbox]{flushend}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{placeins}
+\usepackage{float}
+% \usepackage{hyperref}
+% % The following is done to hide ugly color boxes around the links
+% \usepackage{xcolor}
+% \hypersetup{
+% colorlinks,
+% linkcolor={red!50!black},
+% citecolor={blue!50!black},
+% urlcolor={blue!80!black}
+% }
+\usepackage{booktabs}
+\usepackage{standalone}
+\usepackage{filecontents}
+\usepackage{subfig}
+\usepackage{tabularx,colortbl}
+\usepackage{pgfplots}
+\usepackage{standalone}
+\usepackage{tikz}
+\tikzset{
+  font={\fontsize{9pt}{9}\selectfont}}
+  \usepackage{tikzscale} % Scale the figure not the font
+\pgfplotsset{compat=newest}
+%% the following commands are sometimes needed
+\usepackage{grffile}
+\usepackage{mathtools,amssymb}
+\usepackage{siunitx}
+  \sisetup{per=slash, load=abbr}
+\usepackage[a4paper, left=.63in,right=.63in,top=.75in,bottom=1in]{geometry}
+
+%%%%%%%%%%
+%%%%%%%%%% TIPS and TRICKS
+%%%%%%%%%%
+%
+% ------------------------------- Useful Tricks Learnt
+% Use ={}& to align subequations to the left
+
+% Use = for single equations
+
+% Use &= for split equations
+
+% Use commath package to properly write differential operators and derivatives.
+
+% Use \int\limits to nicely put integral limits
+
+% For long equations, use align environment with \notag\\ as a linebreak.
+
+% To hide section numbers, place an asterisk after the section, e.g., \section*{}
+
+% Put comments % in between the lines in order to avoid forming a new paragraph.
+
+% To enter special characters into Inkspace figures, use Ctrl+U and then enter       the unicode. e.g., for \times symbol, the unicode is U+0D7. So the key entry would be Ctrl+U U+0d7 and then press enter.
+
+% Put \eqref instead or \ref to reference equations. This will automatically put parantheses around the eq. number. amsmath package required.
+%
+% ----------------- To compile with references use the following order in Shell"
+% 1. pdflatex filename.tex
+% 2. bibtex filename (no extension)
+% 3. bibtex filename (no extension)
+% 4. pdflatex filename.tex
+% -----------------
+
+%
+
+%
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{A Wearable, Low-cost Hand Tremor Sensor for Detecting Hypoglycemic Events in Diabetic Patients}
+
+
+% author names and affiliations
+% use a multiple column layout for up to two different
+% affiliations
+
+\author{\IEEEauthorblockN{Lilia Aljihmani\IEEEauthorrefmark{1},
+Yibo Zhu\IEEEauthorrefmark{2},
+Hasan T. Abbas\IEEEauthorrefmark{1},
+Ranjana Mehta\IEEEauthorrefmark{3},
+Farzan Sasangohar\IEEEauthorrefmark{2}, \\
+Madhav Erraguntla\IEEEauthorrefmark{2},
+Qammer H. Abbasi\IEEEauthorrefmark{4}, and
+Khalid A. Qaraqe\IEEEauthorrefmark{1}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electrical \&
+Computer Engineering,
+Texas A\&M University at Qatar,
+Doha, Qatar 23874}
+\IEEEauthorblockA{\IEEEauthorrefmark{2} Department of Industrial  \&
+Systems Engineering,
+Texas A\&M University,
+College Station, TX 77843-3128\\}
+\IEEEauthorblockA{\IEEEauthorrefmark{3} Department of Environmental \& Occupational Safety,
+Texas A\&M University,
+College Station, TX 77843-3128\\}
+\IEEEauthorblockA{\IEEEauthorrefmark{4} Electronic \& Nanoscale Engineering
+University of Glasgow,
+Glasgow, Scotland G12 8QQ\\
+Email: lilia.aljihmani@qatar.tamu.edu}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+%
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3},
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+The abstract goes here. DO NOT USE SPECIAL CHARACTERS, SYMBOLS, OR MATH IN YOUR TITLE OR ABSTRACT.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+component; formatting; style; styling;
+
+\end{IEEEkeywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+% no \IEEEPARstart
+Tremor is a rapid back and forth movement of one or more parts of the human body which can be quantified in healthy individuals and considered a pathological symptom \cite{RN8}. It affects the hands, arms, head, face, voice, trunk, and legs. Tremor occurs on its own or be a symptom associated with disorders, medicines, alcohol, mercury poisoning, anxiety or panic. The tremors can be classified into two main categories: resting and action tremor. The resting tremor (\SIrange{3}{6}{\hertz}) occurs when the affected body part is completely supported against gravity (e.g., hands resting on the lap), while the action tremor is produced by voluntary muscle contraction. There are further sub-classifications of the action tremor, namely postural, kinetic, intention tremor, task-specific tremor and isometric \cite{RN7}. Postural tremor (\SIrange{4}{12}{\hertz}) occurs when the affected body part maintains position against gravity (e.g., extending arms in front of body). Isometric tremor results from muscle contraction against stationary objects (e.g., holding a heavy object in one hand). Kinetic tremor, which occurs with voluntary movement, is either simple kinetic tremor or intention tremor. Simple kinetic tremor (3-10 Hz) is associated with movement of extremities (e.g., pronation-supination or flexion-extension wrist movements). Intention tremor (<5Hz) occurs during visually guided movement toward a target (e.g., finger-to-nose or finger-to-finger testing), with significant amplitude fluctuation on approaching the target. Task-specific tremor (4-10 Hz) occurs with specific action (e.g., handwriting tremor) {Smaga, 2003 #7}. Tremor is most commonly classified by its appearance and cause or origin.  Some of the most common forms of tremor include: essential, dystonic, cerebellar, psychogenic, physiological, parkinsonian and orthostatic {Bhidayasiri, 2005 #16} {Deuschl, 2001 #18}.Tremor is usually examined using an accelerometer and/or with electromyography. In the accelerometer, the total force measured in postural finger tremor is proportional to the acceleration. Acceleration reveals the high-frequency components well because faster oscillations generate more power within higher frequencies {Duval, 2005 #21}.Physiological tremor(PT) is defined as an oscillatory, roughly sinusoidal involuntary movement of a body part {Duval, 2005 #21}. All normal persons exhibit physiologic tremor, a benign, high-frequency, low-amplitude postural tremor. It is invisible to the naked eye and can be amplified by doing some action as holding a piece of paper on the outstretched hand or pointing a laser at a screen. Enhanced physiologic tremor is a visible, high-frequency postural tremor that occurs in the absence of neurologic disease and is caused by medical conditions such as thyrotoxicosis, hypoglycemia, the use of certain drugs, or withdrawal from alcohol or benzodiazepines. It is usually reversible once the cause is corrected {Smaga, 2003 #7}.According to Galinsky et al. {Galinsky, 1990 #4}, physiological tremor consists of arhythrnic movements occurring at frequencies predominantly in the range of 7-12 Hz. Physiological tremor occurs in specific body areas of a healthy person resulting from an interaction of mechanical and nervous factors. It is composed of oscillations which stem from two principal components: the mechanical-reflex component and the central-neurogenic component {Tomczak, 2014 #22} {Carignan, 2012 #23}. The mechanical-reflex component is the larger of the two oscillations and its frequency is governed by the inertial and elastic properties of the body {Elble, 2003 #26}. When examining index finger tremor, frequencies below 7 Hz are mainly associated with mechanical-reflex components {Carignan, 2010 #1}. The mechanical-reflex component is driven by the resonance properties of a segment and could be influenced by reflex activities. The stretch reflex response to mechanical oscillation can be increased by fatigue, anxiety, and some medications, producing a modulation of motor-unit activity {Carignan, 2010 #1}. The central-neurogenic component of physiological tremor is associated with modulation of motor-unit activity and comprises oscillations at frequencies between 8 and 12 Hz. Frequencies in this range are associated with oscillations generated within the central nervous system whereas frequencies within the 16–30 
+Hz range are associated with the mechanical resonance of the finger {Carignan, 2010 #1} {Vernooij, 2015 #2} {Carignan, 2012 #23} {Elble, 2003 #26}. The fatigue is a factor influencing characteristics of physiological tremor. In healthy adults, significant increases in the amplitude of the 8–12 Hz neural component are reported following simple task manipulations such as: voluntarily stiffening the limb, changing whole body postural position, and following exercise-induced fatigue {Morrison, 2013 #5}.The exercise-induced fatigue results in explicit changes in the time and frequency characteristics of the tremor output. The greatest effect being increased peak amplitude of the generated, 8–12 Hz frequency component {Morrison, 2005 #6}.The onset of fatigue produces enhanced physiological tremor, characterized by regular or monorhythmic amplitude oscillations {Galinsky, 1990 #4} {Smaga, 2003 #7}.A temporary decrease in tremor amplitude just after the strong brief effort is followed by its gradual increase above a pre-fatigue level {Gajewski, 2006 #24} {Galinsky, 1990 #4}.The purpose of this investigation is to examine the effect of fatigue on physiological tremor. In order to assess its impact on tremor, resting, postural and loaded finger and wrist tremors were recorded in healthy young adults using a non-invasive, wearable, cost-effective, continuous proactive system. The frequency and the amplitude of the finger/wrist tremorwere measured by compact high-precision accelerometers with two configurations supporting wrist and finger-based.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+
+\subsection{Subsection Heading Here}
+Subsection text here.
+
+
+\subsubsection{Subsubsection Heading Here}
+Subsubsection text here.
+
+\section{Type style and Fonts}
+Wherever Times is specified, Times Roman or Times New Roman may be used. If neither is available on your system, please use the font closest in appearance to Times. Avoid using bit-mapped fonts if possible. True-Type 1 or Open Type fonts are preferred. Please embed symbol fonts, as well, for math, etc.
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+
+
+
+\section{Conclusion}
+The conclusion goes here. this is more of the conclusion
+
+% conference papers do not normally have an appendix
+
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+
+
+The authors would like to thank...
+more thanks here
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:kopka}
+H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
