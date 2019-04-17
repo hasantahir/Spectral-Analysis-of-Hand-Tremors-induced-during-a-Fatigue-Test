@@ -7,9 +7,6 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
-at={(0.758in,0.481in)},
 scale only axis,
 xmin=1,
 xmax=8,
@@ -21,8 +18,6 @@ ymax=100,
 ylabel style={font=\color{white!15!black}},
 ylabel={PSD \%},
 axis background/.style={fill=white},
-title style={font=\bfseries},
-title={Wrist - PSD Distribution in 8-14 Hz  - First and last four 30 \% MVC},
 xmajorgrids,
 ymajorgrids,
 legend style={legend cell align=left, align=left, draw=white!15!black}
@@ -48,7 +43,6 @@ x	y\\
 2	64.6387478706341\\
 1	63.5304459815161\\
 }--cycle;
-\addlegendentry{data1}
 
 \addplot [color=white!55!blue]
   table[row sep=crcr]{%
@@ -61,7 +55,6 @@ x	y\\
 7	35.4760165211279\\
 8	40.5856527628041\\
 };
-\addlegendentry{data2}
 
 \addplot [color=white!55!blue]
   table[row sep=crcr]{%
@@ -74,7 +67,6 @@ x	y\\
 7	77.5035211155284\\
 8	71.3276534949221\\
 };
-\addlegendentry{data3}
 
 \addplot [color=blue, mark=*, mark options={solid, fill=white!20!red, blue}]
   table[row sep=crcr]{%
@@ -87,7 +79,6 @@ x	y\\
 7	56.4897688183282\\
 8	55.9566531288631\\
 };
-\addlegendentry{data4}
 
 \end{axis}
 \end{tikzpicture}%

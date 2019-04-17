@@ -7,9 +7,6 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
-at={(0.758in,0.481in)},
 scale only axis,
 xmin=1,
 xmax=5,
@@ -17,7 +14,7 @@ xtick={1,2,3,4,5},
 xticklabels={{Pre-},{0 min},{1 min},{5 min},{10 min}},
 xticklabel style={rotate=270},
 ymin=-5,
-ymax=35,
+ymax=10,
 ylabel style={font=\color{white!15!black}},
 ylabel={Amplitude (a.u.)},
 axis background/.style={fill=white},
@@ -40,7 +37,7 @@ x	y\\
 2	1.79948838847056\\
 1	1.37840067198868\\
 }--cycle;
-\addlegendentry{data1}
+
 
 \addplot [color=white!55!red]
   table[row sep=crcr]{%
@@ -50,7 +47,7 @@ x	y\\
 4	0.275225838304084\\
 5	-1.12035615329925\\
 };
-\addlegendentry{data2}
+
 
 \addplot [color=white!55!red]
   table[row sep=crcr]{%
@@ -60,7 +57,7 @@ x	y\\
 4	1.89885050318043\\
 5	5.5355879468649\\
 };
-\addlegendentry{data3}
+
 
 \addplot [color=red]
   table[row sep=crcr]{%
@@ -70,7 +67,6 @@ x	y\\
 4	1.08703817074226\\
 5	2.20761589678283\\
 };
-\addlegendentry{data4}
 
 \end{axis}
 \end{tikzpicture}%

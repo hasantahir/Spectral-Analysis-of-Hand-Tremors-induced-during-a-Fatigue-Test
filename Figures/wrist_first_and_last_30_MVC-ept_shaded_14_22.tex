@@ -7,9 +7,6 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
-at={(0.758in,0.481in)},
 scale only axis,
 xmin=1,
 xmax=8,
@@ -46,7 +43,6 @@ x	y\\
 2	34.688726842297\\
 1	34.1583559737828\\
 }--cycle;
-\addlegendentry{data1}
 
 \addplot [color=white!55!blue]
   table[row sep=crcr]{%
@@ -59,7 +55,6 @@ x	y\\
 7	9.71897196349151\\
 8	9.55502249259987\\
 };
-\addlegendentry{data2}
 
 \addplot [color=white!55!blue]
   table[row sep=crcr]{%
@@ -72,7 +67,6 @@ x	y\\
 7	44.4873330341753\\
 8	39.5595414266304\\
 };
-\addlegendentry{data3}
 
 \addplot [color=blue, mark=*, mark options={solid, fill=white!20!red, blue}]
   table[row sep=crcr]{%
@@ -85,7 +79,6 @@ x	y\\
 7	27.1031524988334\\
 8	24.5572819596151\\
 };
-\addlegendentry{data4}
 
 \end{axis}
 \end{tikzpicture}%
